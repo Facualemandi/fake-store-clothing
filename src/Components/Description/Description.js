@@ -66,14 +66,14 @@ const Description = ({
 
         <section className="section_btn">
           <section className="section_add">
-            <FiMinus onClick={deleteCount} />
-            <span> {count} </span>
-            <MdAdd onClick={addCount} />
+            <FiMinus onClick={deleteCount}  className='minus'/>
+            <span className="count_description"> {count} </span>
+            <MdAdd onClick={addCount} className='add'/>
           </section>
 
           <section className="section_add_cart">
             <button className="btn_add" onClick={() => onAmount(id)}>
-              Add to Cart
+             Agregar al carrito
             </button>
           </section>
         </section>
