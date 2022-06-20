@@ -16,15 +16,16 @@ const Description = ({
   count,
   modal,
   cart,
-  updateNewAmount
+  updateNewAmount,
 }) => {
   const { name, image, price, description, composicion, marca, material, id } =
     isProductCart;
 
+
+    const totalProductDescription = price * count;
   return (
     <>
       {modal && <ModalAddCart />}
-    
 
       <header className="header_description">
         <NavLink to={"/"}>
@@ -65,23 +66,24 @@ const Description = ({
         </section>
 
         <section className="section_btn">
+          <section className="container_count_description">
+            <p className="total_product_desc">${totalProductDescription}</p>
           <section className="section_add">
-            <FiMinus onClick={deleteCount}  className='minus'/>
+            <FiMinus onClick={deleteCount} className="minus" />
             <span className="count_description"> {count} </span>
-            <MdAdd onClick={addCount} className='add'/>
+            <MdAdd onClick={addCount} className="add" />
+          </section>
           </section>
 
           <section className="section_add_cart">
             <button className="btn_add" onClick={() => onAmount(id)}>
-             Agregar al carrito
+              Agregar al carrito
             </button>
           </section>
         </section>
 
-        {updateNewAmount && <UpdateAmount/>}
+        {updateNewAmount && <UpdateAmount />}
       </main>
-
-       
     </>
   );
 };
