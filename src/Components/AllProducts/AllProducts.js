@@ -8,6 +8,7 @@ import { useProducts } from "../../Hooks/useProducts";
 import { NavLink } from "react-router-dom";
 import { FcLikePlaceholder } from "react-icons/fc";
 import NavBottom from "../NavBottom/NavBottom";
+import NoFound from "../NoFound/NoFound";
 
 const AllProducts = ({
   handleDescription,
@@ -31,13 +32,15 @@ const AllProducts = ({
       <NavCategories />
 
       {loading && <Loader />}
+    
       <main className="main_products">
+        
         {setProduct.map((el) => (
           <NavLink
-            to={`/Description/${el.name}`}
-            onClick={() => handleDescription(el)}
-            className="navlink_all"
-            key={el.id}
+          to={`/Description/${el.name}`}
+          onClick={() => handleDescription(el)}
+          className="navlink_all"
+          key={el.id}
           >
             <section className="section_all_product">
               <img alt={el.name} src={el.image} />
@@ -46,12 +49,13 @@ const AllProducts = ({
               <FcLikePlaceholder
                 className="no_like"
                 onClick={() => onLike(el.name)}
-              />
+                />
             </section>
           </NavLink>
         ))}
       </main>
 
+                {setProduct.length === 0 && <NoFound/>}
       <NavBottom />
     </>
   );

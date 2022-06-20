@@ -46,6 +46,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   padding: 10px;
+  margin-bottom: 150px;
 }
 .description_item p {
   margin-top: 10px;
@@ -128,6 +129,11 @@
   background-color: #b2c8ff;
   color: rgb(0, 0, 0);
   font-weight: bold;
+}
+
+.section_btn{
+  position: fixed;
+  bottom: 10px;
 }
 
 .section_add_cart {
