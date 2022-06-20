@@ -1,0 +1,24 @@
+.main_search {
+  width: 100vw;
+}
+
+.section_search {
+  width: 90vw;
+  margin: 10px auto;
+  border: 1px solid rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.section_search input {
+  padding: 15px;
+  width: 80vw;
+  border: none;
+  border-radius: 10px;
+}
+
+.icon_search {
+  width: 30px;
+  height: 30px;
+  color: rgba(200, 200, 200, 0.681);
+}

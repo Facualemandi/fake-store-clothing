@@ -1,0 +1,135 @@
+.main_description {
+  width: 100vw;
+  margin: auto;
+  border-radius: 30px;
+  padding-top: 60px;
+}
+
+.main_description section img {
+  width: 94vw;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.description_name_price {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.description_name_price p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18;
+  font-weight: bold;
+  width: 50vw;
+  letter-spacing: 0rem;
+}
+
+.description_name_price span {
+  font-family: "Roboto Mono", monospace;
+}
+
+.description_product {
+  width: 90vw;
+  margin: auto;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  padding: 10px;
+}
+.description_item {
+  width: 90vw;
+  margin: auto;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+}
+.description_item p {
+  margin-top: 10px;
+}
+
+.header_description {
+  width: 100vw;
+  height: 60px;
+  background-color: rgba(183, 183, 183, 0.479);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  position: fixed;
+}
+
+.header_description p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+}
+
+.icon_left {
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+  color: black;
+  margin-left: 10px;
+}
+
+.icon_cart {
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90vw;
+}
+
+.numbers p {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(200, 200, 200, 0.411);
+}
+
+.section_add {
+  width: 60vw;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #f0fffc;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.section_add_cart {
+  width: 60vw;
+  margin: auto;
+}
+.btn_add {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(211, 211, 211, 0.756);
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: rgb(38, 38, 38);
+  font-weight: 500;
+}
+
+.navlink_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}

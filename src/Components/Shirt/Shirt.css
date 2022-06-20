@@ -1,0 +1,40 @@
+.main_shirts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95vw;
+  margin: auto;
+  margin-bottom: 80px;
+}
+.img_shirts {
+  width: 100vw;
+  height: 170px;
+}
+
+.container_shirt {
+  margin: 10px;
+  box-shadow: 0px 0px 7px 0px rgba(166, 166, 166, 0.371);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  position: relative;
+}
+.container_shirt img {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+}
+
+.container_shirt p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 5px;
+  color: rgb(101, 101, 101);
+  margin: auto;
+  padding: 5px;
+}
+
+.navlink_shirt{
+  text-decoration: none;
+}

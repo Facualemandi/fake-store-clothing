@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(210, 210, 210, 0.279);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_modal {
+  width: 85vw;
+  height: 300px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 15px 0px rgba(195, 195, 195, 0.463);
+}
+.icon_check {
+  width: 70px;
+  height: 100px;
+}
+.section_modal p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
