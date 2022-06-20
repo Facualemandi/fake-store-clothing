@@ -37,6 +37,12 @@ function App() {
       if (cart.find((obj) => obj.id === newObj.id)) {
         const isAmount = cart.find((obj) => obj.id === newObj.id);
         isAmount.amount = count;
+        setUpdateNewAmount(true)
+
+        setTimeout(() => {
+          setUpdateNewAmount(false)
+          setCount(0)
+        }, 1000);
       } else {
         setCart([...cart, newObj]);
       }
@@ -48,6 +54,7 @@ function App() {
     setModal(true);
     setTimeout(() => {
       setModal(false);
+      setCount(0)
     }, 1000);
   }, [cart]);
 

@@ -24,6 +24,7 @@ const Description = ({
   return (
     <>
       {modal && <ModalAddCart />}
+    
 
       <header className="header_description">
         <NavLink to={"/"}>
@@ -76,9 +77,11 @@ const Description = ({
             </button>
           </section>
         </section>
+
+        {updateNewAmount && <UpdateAmount/>}
       </main>
 
-      <UpdateAmount/>
+       
     </>
   );
 };
