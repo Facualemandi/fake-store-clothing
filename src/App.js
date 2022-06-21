@@ -13,6 +13,7 @@ import { useSearch } from "./Hooks/useSearch";
 import { getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "./Firebase/firebase";
 import Likes from "./Components/Likes/Likes";
+import { Support } from "./Components/Support/Support";
 
 function App() {
   const { products, shoes, shirts, jackets } = useProducts();
@@ -32,14 +33,11 @@ function App() {
     const product = await getDoc(doc(db, "Products", id));
     const newObj = { ...product.data(), id: id, amount: count };
 
-    console.log(newObj);
-
     if (count > 0) {
       if (cart.find((obj) => obj.id === newObj.id)) {
         const isAmount = cart.find((obj) => obj.id === newObj.id);
         isAmount.amount = count;
         setUpdateNewAmount(true);
-
         setTimeout(() => {
           setUpdateNewAmount(false);
           setCount(0);
@@ -51,7 +49,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(cart);
     setModal(true);
     setTimeout(() => {
       setModal(false);
@@ -60,6 +57,7 @@ function App() {
   }, [cart]);
 
   const [likeProduct, setLikeProduct] = useState([]);
+  const [likeModal, setLikeModal] = useState(false)
 
   const onLike = async (id, el, e) => {
     e.preventDefault();
@@ -67,18 +65,16 @@ function App() {
     const newObj = { ...product.data(), like: true };
 
     if (el.id === id) {
-      if (likeProduct.find((obj) => obj.name === newObj.name)) {
-        // const isExists = likeProduct.find((el) => el.id === newObj.id)
-        console.log("Ya existe");
-      } else {
-        setLikeProduct([...likeProduct, newObj]);
-      }
-    }
-  };
+      setLikeProduct([...likeProduct, newObj]);
+      setLikeModal(true);
 
-  useEffect(() => {
-    console.log(likeProduct);
-  }, [likeProduct]);
+      setTimeout(() => {
+        setLikeModal(false)
+      }, 500)
+    }
+
+
+  };
 
   return (
     <>
@@ -94,6 +90,8 @@ function App() {
               setProduct={setProduct}
               count={count}
               onLike={onLike}
+              likeProduct={likeProduct}
+              likeModal={likeModal}
             />
           }
         />
@@ -105,6 +103,7 @@ function App() {
               setProduct={setProduct}
               handleDescription={handleDescription}
               onLike={onLike}
+              likeProduct={likeProduct}
             />
           }
         />
@@ -116,6 +115,7 @@ function App() {
               handleDescription={handleDescription}
               setProduct={setProduct}
               onLike={onLike}
+              likeProduct={likeProduct}
             />
           }
         />
@@ -127,6 +127,7 @@ function App() {
               setProduct={setProduct}
               handleDescription={handleDescription}
               onLike={onLike}
+              likeProduct={likeProduct}
             />
           }
         />
@@ -154,7 +155,14 @@ function App() {
           }
         />
 
-        <Route path="/Likes" element={<Likes likeProduct={likeProduct} />} />
+        <Route
+          path="/Likes"
+          element={
+            <Likes likeProduct={likeProduct} setLikeProduct={setLikeProduct} />
+          }
+        />
+
+        <Route path="/Support"  element={<Support/>}/>
       </Routes>
     </>
   );

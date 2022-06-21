@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
 import NavBottom from "../NavBottom/NavBottom";
 import NoFound from "../NoFound/NoFound";
+import ModalLike from "../ModalLike/ModalLike";
 
 const AllProducts = ({
   handleDescription,
@@ -16,6 +17,8 @@ const AllProducts = ({
   changeValue,
   setProduct,
   onLike,
+  likeProduct,
+  likeModal
 }) => {
   const { loading } = useProducts();
 
@@ -29,6 +32,8 @@ const AllProducts = ({
       <NavCategories />
 
       {loading && <Loader />}
+
+      {likeModal && <ModalLike/>}
 
       <main className="main_products">
         {setProduct.map((el) => (
@@ -48,7 +53,7 @@ const AllProducts = ({
                   className="no_like"
                   onClick={(e) => onLike(el.id, el, e)}
                 />
-                
+
               </section>
             </NavLink>
           </>
@@ -56,7 +61,7 @@ const AllProducts = ({
       </main>
       {setProduct.length === 0 && !loading && <NoFound />}
 
-      <NavBottom />
+      <NavBottom likeProduct={likeProduct} />
     </>
   );
 };

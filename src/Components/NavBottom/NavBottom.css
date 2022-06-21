@@ -1,0 +1,14 @@
+.navlink_nav_bottom{
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.amount_product_like{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

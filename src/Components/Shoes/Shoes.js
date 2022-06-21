@@ -8,7 +8,7 @@ import { Search } from "../Search/Search";
 import "./Shoes.css";
 import { FcLike } from "react-icons/fc";
 
-const Shoes = ({ handleDescription, onLike }) => {
+const Shoes = ({ handleDescription, onLike, likeProduct }) => {
   const { changeValue, onChangeValue, setShoes } = useSearch();
 
   return (
@@ -40,7 +40,7 @@ const Shoes = ({ handleDescription, onLike }) => {
         ))}
       </main>
 
-      <NavBottom />
+      <NavBottom  likeProduct={likeProduct}/>
     </>
   );
 };

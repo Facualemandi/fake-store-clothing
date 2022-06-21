@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import NavBottom from "../NavBottom/NavBottom";
 import { FcLike } from "react-icons/fc";
 
-const Jackets = ({ handleDescription, onLike }) => {
+const Jackets = ({ handleDescription, onLike, likeProduct }) => {
   const { changeValue, onChangeValue, setJackets } = useSearch();
 
   return (
@@ -40,7 +40,7 @@ const Jackets = ({ handleDescription, onLike }) => {
         ))}
       </main>
 
-      <NavBottom />
+      <NavBottom  likeProduct={likeProduct}/>
     </>
   );
 };
