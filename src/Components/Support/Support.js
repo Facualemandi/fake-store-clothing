@@ -1,36 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Support.css";
 
 const initialForm = {
   name: "",
-  email: "",
+  surname: "",
+  phone: "",
+  text: "",
 };
 
 export const Support = () => {
+  const [form, setForm] = useState(initialForm);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setForm(initialForm);
+  };
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <main className="main_suport">
         <h1>Que problema tuviste?</h1>
-        <form className="section_support">
+
+        <form className="section_support" onSubmit={handleSubmit}>
           <section>
             <label for="nombre">Nombre</label>
-            <input id="nombre" type={"text"} placeholder="Nombre" />
+            <input
+              id="nombre"
+              type={"text"}
+              name="name"
+              placeholder="Nombre"
+              onChange={handleChange}
+              value={form.name}
+            />
           </section>
           <section>
-            <label for="nombre">Apellido</label>
-            <input id="nombre" type={"text"} placeholder="Apellido" />
+            <label for="apeliido">Apellido</label>
+            <input
+              id="apeliido"
+              type={"text"}
+              placeholder="Apellido"
+              name="surname"
+              onChange={handleChange}
+              value={form.surname}
+            />
           </section>
           <section>
-            <label for="nombre">Telefono - (para contactarte)</label>
-            <input id="nombre" type={"number"} placeholder="Telefono" />
+            <label for="numero">Telefono - (para contactarte)</label>
+            <input
+              id="numero"
+              type={"number"}
+              placeholder="Telefono"
+              onChange={handleChange}
+              value={form.phone}
+              name="phone"
+            />
           </section>
           <section>
-            <label for="nombre">Contanos cual fue tu problema</label>
-            <textarea rows="10"></textarea>
+            <label for="texto">Contanos cual fue tu problema</label>
+            <textarea
+              id="texto"
+              rows="10"
+              value={form.text}
+              onChange={handleChange}
+              name="text"
+            ></textarea>
           </section>
 
           <section>
-            <input id="nombre" type={"submit"} />
+            <input type={"submit"} />
           </section>
         </form>
       </main>
