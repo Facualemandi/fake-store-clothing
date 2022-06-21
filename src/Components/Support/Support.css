@@ -1,0 +1,42 @@
+.main_suport h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+  margin: 10px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: auto;
+  margin-top: 10px;
+}
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+}
+
+.section_support {
+  margin-top: 15px;
+}
+
+.section_support section {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.section_support input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.section_support label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}

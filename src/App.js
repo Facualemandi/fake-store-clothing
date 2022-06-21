@@ -57,7 +57,7 @@ function App() {
   }, [cart]);
 
   const [likeProduct, setLikeProduct] = useState([]);
-  const [likeModal, setLikeModal] = useState(false)
+  const [likeModal, setLikeModal] = useState(false);
 
   const onLike = async (id, el, e) => {
     e.preventDefault();
@@ -65,15 +65,18 @@ function App() {
     const newObj = { ...product.data(), like: true };
 
     if (el.id === id) {
-      setLikeProduct([...likeProduct, newObj]);
-      setLikeModal(true);
-
-      setTimeout(() => {
-        setLikeModal(false)
-      }, 500)
+      if (el.id === id) {
+        if (likeProduct.find((obj) => obj.name === newObj.name)) {
+          console.log("Ya existe");
+        } else {
+          setLikeProduct([...likeProduct, newObj]);
+          setLikeModal(true);
+          setTimeout(() => {
+            setLikeModal(false);
+          }, 500);
+        }
+      }
     }
-
-
   };
 
   return (
@@ -162,7 +165,7 @@ function App() {
           }
         />
 
-        <Route path="/Support"  element={<Support/>}/>
+        <Route path="/Support" element={<Support />} />
       </Routes>
     </>
   );
