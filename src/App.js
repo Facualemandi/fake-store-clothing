@@ -12,6 +12,7 @@ import { useSearch } from "./Hooks/useSearch";
 
 import { getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "./Firebase/firebase";
+import Likes from "./Components/Likes/Likes";
 
 function App() {
   const { products, shoes, shirts, jackets } = useProducts();
@@ -19,7 +20,7 @@ function App() {
   const [isProductCart, setIsProductCart] = useState([]);
   const { addCount, deleteCount, count, setCount } = useAddDelete();
   const [modal, setModal] = useState(false);
- const [updateNewAmount, setUpdateNewAmount] = useState(false)
+  const [updateNewAmount, setUpdateNewAmount] = useState(false);
 
   const handleDescription = (el) => {
     setIsProductCart(el);
@@ -37,11 +38,11 @@ function App() {
       if (cart.find((obj) => obj.id === newObj.id)) {
         const isAmount = cart.find((obj) => obj.id === newObj.id);
         isAmount.amount = count;
-        setUpdateNewAmount(true)
+        setUpdateNewAmount(true);
 
         setTimeout(() => {
-          setUpdateNewAmount(false)
-          setCount(0)
+          setUpdateNewAmount(false);
+          setCount(0);
         }, 1000);
       } else {
         setCart([...cart, newObj]);
@@ -54,10 +55,26 @@ function App() {
     setModal(true);
     setTimeout(() => {
       setModal(false);
-      setCount(0)
+      setCount(0);
     }, 1000);
   }, [cart]);
 
+  const [likeProduct, setLikeProduct] = useState([]);
+
+  const onLike = async (id, el, e) => {
+    e.preventDefault();
+    const product = await getDoc(doc(db, "Products", id));
+    const newObj = { ...product.data(), like: true };
+
+    if (el.id === id) {
+      console.log("son iguales");
+      setLikeProduct([...likeProduct, newObj]);
+    }
+  };
+
+  useEffect(() => {
+    console.log(likeProduct);
+  }, [likeProduct]);
   return (
     <>
       <Routes>
@@ -71,6 +88,7 @@ function App() {
               handleDescription={handleDescription}
               setProduct={setProduct}
               count={count}
+              onLike={onLike}
             />
           }
         />
@@ -81,6 +99,7 @@ function App() {
               shoes={shoes}
               setProduct={setProduct}
               handleDescription={handleDescription}
+              onLike={onLike}
             />
           }
         />
@@ -91,6 +110,7 @@ function App() {
               shirts={shirts}
               handleDescription={handleDescription}
               setProduct={setProduct}
+              onLike={onLike}
             />
           }
         />
@@ -101,6 +121,7 @@ function App() {
               jackets={jackets}
               setProduct={setProduct}
               handleDescription={handleDescription}
+              onLike={onLike}
             />
           }
         />
@@ -109,7 +130,6 @@ function App() {
           element={
             <Description
               isProductCart={isProductCart}
-              setProduct={setProduct}
               addCount={addCount}
               deleteCount={deleteCount}
               count={count}
@@ -117,6 +137,7 @@ function App() {
               modal={modal}
               updateNewAmount={updateNewAmount}
               cart={cart}
+              onLike={onLike}
             />
           }
         />
@@ -127,6 +148,8 @@ function App() {
             <ProductsCart addCount={addCount} cart={cart} setCart={setCart} />
           }
         />
+
+        <Route path="/Likes" element={<Likes likeProduct={likeProduct}/>}/>
       </Routes>
     </>
   );

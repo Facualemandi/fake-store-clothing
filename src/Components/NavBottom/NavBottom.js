@@ -8,7 +8,9 @@ const NavBottom = () => {
   return (
     <>
       <nav className="talkbubble">
-        <FcLike className="icon_like" />
+        <NavLink to="/Likes">
+          <FcLike className="icon_like" />
+        </NavLink>
         <NavLink to={"/Cart"}>
           <section className="container_cart_all_product">
             <FcPaid className="icon_cart_all_products" />

@@ -6,8 +6,9 @@ import { Search } from "../Search/Search";
 import { useSearch } from "../../Hooks/useSearch";
 import { NavLink } from "react-router-dom";
 import NavBottom from "../NavBottom/NavBottom";
+import { FcLike } from "react-icons/fc";
 
-const Jackets = ({ handleDescription }) => {
+const Jackets = ({ handleDescription, onLike }) => {
   const { changeValue, onChangeValue, setJackets } = useSearch();
 
   return (
@@ -21,21 +22,25 @@ const Jackets = ({ handleDescription }) => {
 
       <main className="main_shockets">
         {setJackets.map((element) => (
-          <NavLink to={`/Description/${element.name}`} className='navlink_shakets'>
-            <section
-              className="container_shockets"
-              key={element.id}
-              onClick={() => handleDescription(element)}
-            >
+          <NavLink
+            to={`/Description/${element.name}`}
+            className="navlink_shakets"
+            onClick={() => handleDescription(element)}
+          >
+            <section className="section_all_product">
               <img alt={element.name} src={element.image} />
               <p>{element.name}</p>
               <span className="price">${element.price}</span>
+              <FcLike
+                className="no_like"
+                onClick={(e) => onLike(element.id, element, e)}
+              />
             </section>
           </NavLink>
         ))}
       </main>
 
-      <NavBottom/>
+      <NavBottom />
     </>
   );
 };

@@ -1,0 +1,42 @@
+.container_nolike {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_likes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90vw;
+  margin: auto;
+}
+
+.section_nolike_products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section_nolike_products p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nolike {
+  width: 50px;
+  height: 50px;
+}
+
+.favorite_products_p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 15px;
+}

@@ -6,8 +6,9 @@ import { Search } from "../Search/Search";
 import { useSearch } from "../../Hooks/useSearch";
 import { NavLink } from "react-router-dom";
 import NavBottom from "../NavBottom/NavBottom";
+import { FcLike } from "react-icons/fc";
 
-const Shirt = ({ handleDescription }) => {
+const Shirt = ({ handleDescription, onLike }) => {
   const { changeValue, onChangeValue, setShirt } = useSearch();
 
   return (
@@ -23,16 +24,20 @@ const Shirt = ({ handleDescription }) => {
           <NavLink
             to={`/Description/${element.name}`}
             className="navlink_shirt"
+            key={element.id}
+            onClick={() => handleDescription(element)}
           >
-            <section
-              className="container_shirt"
-              onClick={() => handleDescription(element)}
-              key={element.id}
-            >
+            <section className="section_all_product">
               <img alt={element.name} src={element.image} />
               <p>{element.name}</p>
               <span className="price">${element.price}</span>
+
+              <FcLike
+                className="no_like"
+                onClick={(e) => onLike(element.id, element, e)}
+              />
             </section>
+            
           </NavLink>
         ))}
       </main>

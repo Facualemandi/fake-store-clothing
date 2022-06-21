@@ -6,8 +6,9 @@ import NavBottom from "../NavBottom/NavBottom";
 import NavCategories from "../NavCategories/NavCategories";
 import { Search } from "../Search/Search";
 import "./Shoes.css";
+import { FcLike } from "react-icons/fc";
 
-const Shoes = ({ handleDescription }) => {
+const Shoes = ({ handleDescription, onLike }) => {
   const { changeValue, onChangeValue, setShoes } = useSearch();
 
   return (
@@ -20,21 +21,26 @@ const Shoes = ({ handleDescription }) => {
       <NavCategories />
       <main className="main_shoes">
         {setShoes.map((element) => (
-          <NavLink to={`/Description/${element.name}`} className='navlink_shoes'>
-            <section
-              className="container_shoes"
-              key={element.name}
-              onClick={() => handleDescription(element)}
-            >
+          <NavLink
+            to={`/Description/${element.name}`}
+            className="navlink_shoes"
+            onClick={() => handleDescription(element)}
+          >
+            <section className="section_all_product">
               <img alt="Zapatillas" src={element.image} className="img_shoe" />
               <p>{element.name}</p>
               <span className="price">${element.price}</span>
+
+              <FcLike
+                className="no_like"
+                onClick={(e) => onLike(element.id, element, e)}
+              />
             </section>
           </NavLink>
         ))}
       </main>
 
-      <NavBottom/>
+      <NavBottom />
     </>
   );
 };
