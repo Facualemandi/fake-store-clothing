@@ -38,5 +38,12 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
+}
+
+.section_left_like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-top: 15px;
 }

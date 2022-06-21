@@ -67,14 +67,19 @@ function App() {
     const newObj = { ...product.data(), like: true };
 
     if (el.id === id) {
-      console.log("son iguales");
-      setLikeProduct([...likeProduct, newObj]);
+      if (likeProduct.find((obj) => obj.name === newObj.name)) {
+        // const isExists = likeProduct.find((el) => el.id === newObj.id)
+        console.log("Ya existe");
+      } else {
+        setLikeProduct([...likeProduct, newObj]);
+      }
     }
   };
 
   useEffect(() => {
     console.log(likeProduct);
   }, [likeProduct]);
+
   return (
     <>
       <Routes>
@@ -149,7 +154,7 @@ function App() {
           }
         />
 
-        <Route path="/Likes" element={<Likes likeProduct={likeProduct}/>}/>
+        <Route path="/Likes" element={<Likes likeProduct={likeProduct} />} />
       </Routes>
     </>
   );
