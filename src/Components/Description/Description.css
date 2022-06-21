@@ -7,7 +7,7 @@
 
 .main_description section img {
   width: 94vw;
-  height: 300px;
+  height: 45vh;
   border-radius: 30px;
 }
 
@@ -131,7 +131,7 @@
   font-weight: bold;
 }
 
-.section_btn{
+.section_btn {
   position: fixed;
   bottom: 10px;
 }

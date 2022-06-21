@@ -46,7 +46,6 @@ export const useSearch = () => {
 
     const onChangeValue = (e) => {
         setChangeValue(e.target.value);
-        console.log(e.target.value);
       };
     
   return {

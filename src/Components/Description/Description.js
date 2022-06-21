@@ -8,6 +8,7 @@ import { FiMinus } from "react-icons/fi";
 import ModalAddCart from "../ModalAddCart/ModalAddCart";
 import UpdateAmount from "../UpdateAmount/UpdateAmount";
 
+
 const Description = ({
   isProductCart,
   onAmount,
@@ -41,7 +42,7 @@ const Description = ({
 
       <main className="main_description">
         <section>
-          <img alt={name} src={image} />
+          <img alt={name} src={image}  />
         </section>
 
         <section className="description_name_price">
