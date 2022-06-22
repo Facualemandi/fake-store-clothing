@@ -40,3 +40,29 @@ textarea {
   font-size: 14px;
   font-weight: bold;
 }
+
+.inp_submit {
+  cursor: pointer;
+  background-color: #8babff;
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  .section_support section {
+    width: 50vw;
+  }
+
+  .inp_submit {
+    cursor: pointer;
+    background-color: #8babff;
+    color: white;
+    font-weight: bold;
+  }
+
+  .main_suport {
+    width: 50vw;
+    margin: auto;
+    margin-top: 50px;
+  }
+}

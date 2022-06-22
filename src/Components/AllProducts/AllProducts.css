@@ -163,7 +163,7 @@
 
   .name_sections_desktop {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     width: 165px;
@@ -172,7 +172,10 @@
 
   .name_sections_desktop p {
     font-size: 12px;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     width: 50px;
+  
+    letter-spacing: 0.015rem;
   }
 }

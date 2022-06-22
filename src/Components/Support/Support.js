@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Support.css";
+import { FcLeft } from "react-icons/fc";
 
 const initialForm = {
   name: "",
@@ -24,6 +26,9 @@ export const Support = () => {
   return (
     <>
       <main className="main_suport">
+        <NavLink to={"/"}>
+          <FcLeft className="icon_left_cart" />
+        </NavLink>
         <h1>Que problema tuviste?</h1>
 
         <form className="section_support" onSubmit={handleSubmit}>
@@ -72,7 +77,7 @@ export const Support = () => {
           </section>
 
           <section>
-            <input type={"submit"} />
+            <input type={"submit"} className="inp_submit" />
           </section>
         </form>
       </main>

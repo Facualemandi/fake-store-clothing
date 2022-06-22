@@ -23,3 +23,11 @@
   height: 50px;
   color: grey;
 }
+
+@media (min-width: 1000px) {
+  .section_no_found {
+    position: absolute;
+    top: 500px;
+    left: 100px;
+  }
+}

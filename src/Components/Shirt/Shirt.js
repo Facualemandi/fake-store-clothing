@@ -55,6 +55,11 @@ const Shirt = ({ handleDescription, onLike, likeProduct, likeModal }) => {
       <main className="main_desktop">
         <section>
           <NavBottom likeProduct={likeProduct} />
+          <section className="name_sections_desktop">
+            <p>Likes</p>
+            <p>Carrito</p>
+            <p>Soporte</p>
+          </section>
 
           <section>
             <NavCategories />

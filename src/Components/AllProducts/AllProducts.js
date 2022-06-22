@@ -72,7 +72,7 @@ const AllProducts = ({
           <section className="name_sections_desktop">
             <p>Likes</p>
             <p>Carrito</p>
-            <p>Support</p>
+            <p>Soporte</p>
           </section>
 
           <section>
