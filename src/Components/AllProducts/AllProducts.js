@@ -34,50 +34,50 @@ const AllProducts = ({
 
       {likeModal && <ModalLike />}
 
-    <main className="main_movile">
-      <NavCategories />
-      <section className="main_products">
-        {setProduct.map((el) => (
-          <>
-            <NavLink
-              to={`/Description/${el.name}`}
-              onClick={() => handleDescription(el)}
-              className="navlink_all"
-              key={el.id}
-            >
-              <section className="section_all_product">
-                <img alt={el.name} src={el.image} />
-                <p>{el.name}</p>
-                <span className="price">${el.price}</span>
+      <main className="main_movile">
+        <NavCategories />
+        <section className="main_products">
+          {setProduct.map((el) => (
+            <>
+              <NavLink
+                to={`/Description/${el.name}`}
+                onClick={() => handleDescription(el)}
+                className="navlink_all"
+                key={el.id}
+              >
+                <section className="section_all_product">
+                  <img alt={el.name} src={el.image} />
+                  <p>{el.name}</p>
+                  <span className="price">${el.price}</span>
 
-                <FcLike
-                  className="no_like"
-                  onClick={(e) => onLike(el.id, el, e)}
-                />
-              </section>
-            </NavLink>
-          </>
-        ))}
-      </section>
+                  <FcLike
+                    className="no_like"
+                    onClick={(e) => onLike(el.id, el, e)}
+                  />
+                </section>
+              </NavLink>
+            </>
+          ))}
+        </section>
 
-      <NavBottom likeProduct={likeProduct} />
-    </main>
+        <NavBottom likeProduct={likeProduct} />
+      </main>
       {setProduct.length === 0 && !loading && <NoFound />}
-
 
       {/* ////////////////////////////////////////*/}
 
       <main className="main_desktop">
         <section>
-        <NavBottom likeProduct={likeProduct} />
-          <section>
-              
+          <NavBottom likeProduct={likeProduct} />
+          <section className="name_sections_desktop">
+            <p>Likes</p>
+            <p>Carrito</p>
+            <p>Support</p>
           </section>
 
           <section>
-              <NavCategories/>
+            <NavCategories />
           </section>
-
         </section>
 
         <section className="section_desktop_all">

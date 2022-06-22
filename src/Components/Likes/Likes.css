@@ -24,6 +24,7 @@
 
 .section_nolike_products p {
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
 }
 
 .nolike {
@@ -58,4 +59,14 @@
   right: 15px;
   width: 25px;
   height: 25px;
+}
+@media (min-width: 1000px) {
+  .main_likes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .icon_dislike {
+    cursor: pointer;
+  }
 }

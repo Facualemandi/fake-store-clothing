@@ -5,6 +5,7 @@
   font-family: sans-serif;
   font-size: 14px;
   color: black;
+  width: 40px;
 }
 
 .amount_product_like {
@@ -25,8 +26,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    margin: 5px;
   }
 
   .nav_desktop .section_cart_all_product {
@@ -46,8 +45,8 @@
     border-radius: 100%;
   }
   .icon_cart_desk {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
   .section_nav_desk {
     width: 40px;

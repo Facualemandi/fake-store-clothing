@@ -160,4 +160,19 @@
     width: 1000px;
     margin-top: 15px;
   }
+
+  .name_sections_desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 165px;
+    margin-bottom: 15px;
+  }
+
+  .name_sections_desktop p {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    width: 50px;
+  }
 }

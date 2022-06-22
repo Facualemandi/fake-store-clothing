@@ -95,3 +95,13 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 5px 0px grey;
 }
+
+@media (min-width: 1000px) {
+  .main_product_cart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .icon_delete {
+    cursor: pointer;
+  }
+}

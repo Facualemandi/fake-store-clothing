@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AllProducts from "./Components/AllProducts/AllProducts";
 import Description from "./Components/Description/Description";
 import Jackets from "./Components/Jackets/Jackets";
@@ -7,16 +7,14 @@ import ProductsCart from "./Components/ProductsCart/ProductsCart";
 import Shirt from "./Components/Shirt/Shirt";
 import Shoes from "./Components/Shoes/Shoes";
 import { useAddDelete } from "./Hooks/useAddDelete";
-import { useProducts } from "./Hooks/useProducts";
 import { useSearch } from "./Hooks/useSearch";
 
-import { getDoc, updateDoc, doc } from "firebase/firestore";
+import { getDoc, doc } from "firebase/firestore";
 import { db } from "./Firebase/firebase";
 import Likes from "./Components/Likes/Likes";
 import { Support } from "./Components/Support/Support";
 
 function App() {
-  const { products, shoes, shirts, jackets } = useProducts();
   const { setProduct, onChangeValue, changeValue } = useSearch();
   const [isProductCart, setIsProductCart] = useState([]);
   const { addCount, deleteCount, count, setCount } = useAddDelete();
