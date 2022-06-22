@@ -52,21 +52,6 @@
     display: block;
   }
 
-  .container_nav_desktop section {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    height: auto;
-    border-radius: 30px;
-    background-color: rgba(150, 150, 150, 0.308);
-    margin: 5px;
-  }
-
-  .container_nav_desktop section:hover {
-    background-color: #b0c6ff;
-    transition: 0.5s;
-  }
-
   .container_nav_desktop section section {
     width: 55px;
     height: 55px;
@@ -77,7 +62,20 @@
     font-weight: bold;
   }
 
-  .container_nav_desktop .container_shoe:hover {
-    background-color: #678fef;
+  .nav_link {
+    margin: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(214, 214, 214);
+  }
+
+  .nav_link section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav_link:hover {
+    border: 1px solid rgba(55, 99, 188, 0.738);
   }
 }
