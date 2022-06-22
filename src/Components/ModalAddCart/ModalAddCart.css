@@ -1,11 +1,12 @@
 .modal {
-  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(210, 210, 210, 0.279);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0px;
 }
 .section_modal {
   width: 85vw;
@@ -25,4 +26,25 @@
 .section_modal p {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+}
+
+@media (min-width: 1000px) {
+  .modal {
+    display: flex;
+    width: 100vw;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .section_modal {
+    width: 500px;
+  }
+
+  .section_section_modal {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(206, 206, 206, 0.171);
+    height: 100vh;
+  }
 }
