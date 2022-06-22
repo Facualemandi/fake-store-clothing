@@ -51,3 +51,12 @@
   box-shadow: 0px 0px 5px 0px rgba(200, 200, 200, 0.524);
   z-index: 1000;
 }
+
+@media (min-width: 1000px) {
+  .img_shirts {
+    width: 1000px;
+    height: 270px;
+    display: flex;
+    margin: auto;
+  }
+}

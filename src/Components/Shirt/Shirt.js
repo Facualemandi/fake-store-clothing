@@ -11,10 +11,9 @@ import ModalLike from "../ModalLike/ModalLike";
 import { useProducts } from "../../Hooks/useProducts";
 import NoFound from "../NoFound/NoFound";
 
-const Shirt = ({ handleDescription, onLike, likeProduct, likeModal}) => {
+const Shirt = ({ handleDescription, onLike, likeProduct, likeModal }) => {
   const { changeValue, onChangeValue, setShirt } = useSearch();
-  const {loading} = useProducts()
-  
+  const { loading } = useProducts();
 
   return (
     <>
@@ -23,34 +22,69 @@ const Shirt = ({ handleDescription, onLike, likeProduct, likeModal}) => {
       </header>
 
       <Search changeValue={changeValue} onChangeValue={onChangeValue} />
-      <NavCategories />
-      {likeModal && <ModalLike/>}
-      <main className="main_shirts">
-        {setShirt.map((element) => (
-          <NavLink
-            to={`/Description/${element.name}`}
-            className="navlink_shirt"
-            key={element.id}
-            onClick={() => handleDescription(element)}
-          >
-            <section className="section_all_product">
-              <img alt={element.name} src={element.image} />
-              <p>{element.name}</p>
-              <span className="price">${element.price}</span>
+      {likeModal && <ModalLike />}
 
-              <FcLike
-                className="no_like"
-                onClick={(e) => onLike(element.id, element, e)}
-              />
-            </section>
-            
-          </NavLink>
-        ))}
+      <main className="main_movile">
+        <NavCategories />
+        <section className="main_products">
+          {setShirt.map((element) => (
+            <NavLink
+              to={`/Description/${element.name}`}
+              className="navlink_shirt"
+              key={element.id}
+              onClick={() => handleDescription(element)}
+            >
+              <section className="section_all_product">
+                <img alt={element.name} src={element.image} />
+                <p>{element.name}</p>
+                <span className="price">${element.price}</span>
+
+                <FcLike
+                  className="no_like"
+                  onClick={(e) => onLike(element.id, element, e)}
+                />
+              </section>
+            </NavLink>
+          ))}
+        </section>
+        <NavBottom likeProduct={likeProduct} />
       </main>
 
       {setShirt.length === 0 && !loading && <NoFound />}
-      
-      <NavBottom likeProduct={likeProduct} />
+
+      <main className="main_desktop">
+        <section>
+          <NavBottom likeProduct={likeProduct} />
+
+          <section>
+            <NavCategories />
+          </section>
+        </section>
+
+        <section className="section_desktop_all">
+          {setShirt.map((el) => (
+            <>
+              <NavLink
+                to={`/Description/${el.name}`}
+                onClick={() => handleDescription(el)}
+                className="navlink_all"
+                key={el.id}
+              >
+                <section className="section_all_product">
+                  <img alt={el.name} src={el.image} />
+                  <p>{el.name}</p>
+                  <span className="price">${el.price}</span>
+
+                  <FcLike
+                    className="no_like"
+                    onClick={(e) => onLike(el.id, el, e)}
+                  />
+                </section>
+              </NavLink>
+            </>
+          ))}
+        </section>
+      </main>
     </>
   );
 };
