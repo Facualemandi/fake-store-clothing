@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavCategories.css";
 import Shoes from "../Images/ShoesNav.png";
@@ -12,7 +12,7 @@ const NavCategories = () => {
   return (
     <>
       <nav className="container_nav">
-        <NavLink to={"/"} className="nav_link" onClick={handleAll}>
+        <NavLink to={"/"} className="nav_link">
           <section className="container_shoe">
             <img alt="Zapatilla" src={Shoes} className="shoe" />
           </section>
@@ -41,13 +41,13 @@ const NavCategories = () => {
         </NavLink>
       </nav>
 
+
+
+
       <nav className="container_nav_desktop">
-        <NavLink to={"/"} className="nav_link">
-          <section>
-            <section className="container_shoe">
-              <img alt="Zapatilla" src={Shoes} className="shoe" />
-            </section>
-            <p>Todo</p>
+        <NavLink to={"/"} className="nav_link" onClick={handleAll}>
+          <section className="all_categ_desk">
+            <p>Todo los productos</p>
           </section>
         </NavLink>
 

@@ -80,6 +80,7 @@ const AllProducts = ({
           </section>
         </section>
 
+
         <section className="section_desktop_all">
           {setProduct.map((el) => (
             <>

@@ -65,17 +65,22 @@
   .nav_link {
     margin: 10px;
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
     border: 1px solid rgb(214, 214, 214);
   }
 
   .nav_link section {
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 3px;
   }
   .nav_link:hover {
     border: 1px solid rgba(55, 99, 188, 0.738);
+  }
+
+  .all_categ_desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
