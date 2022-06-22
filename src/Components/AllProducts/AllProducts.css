@@ -152,7 +152,7 @@
   }
   .section_desktop_all {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .main_desktop {
     display: flex;

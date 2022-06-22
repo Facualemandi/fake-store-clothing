@@ -22,30 +22,67 @@ const Jackets = ({ handleDescription, onLike, likeProduct, likeModal }) => {
       </header>
 
       <Search changeValue={changeValue} onChangeValue={onChangeValue} />
-      <NavCategories />
       {likeModal && <ModalLike />}
 
-      <main className="main_shockets">
-        {setJackets.map((element) => (
-          <NavLink
-            to={`/Description/${element.name}`}
-            className="navlink_shakets"
-            onClick={() => handleDescription(element)}
-          >
-            <section className="section_all_product">
-              <img alt={element.name} src={element.image} />
-              <p>{element.name}</p>
-              <span className="price">${element.price}</span>
-              <FcLike
-                className="no_like"
-                onClick={(e) => onLike(element.id, element, e)}
-              />
-            </section>
-          </NavLink>
-        ))}
+      <main className="main_movile">
+        <NavCategories />
+        <section className="main_products">
+          {setJackets.map((element) => (
+            <NavLink
+              to={`/Description/${element.name}`}
+              className="navlink_shakets"
+              onClick={() => handleDescription(element)}
+            >
+              <section className="section_all_product">
+                <img alt={element.name} src={element.image} />
+                <p>{element.name}</p>
+                <span className="price">${element.price}</span>
+                <FcLike
+                  className="no_like"
+                  onClick={(e) => onLike(element.id, element, e)}
+                />
+              </section>
+            </NavLink>
+          ))}
+        </section>
+        <NavBottom likeProduct={likeProduct} />
       </main>
       {setJackets.length === 0 && !loading && <NoFound />}
-      <NavBottom likeProduct={likeProduct} />
+
+      <main className="main_desktop">
+        <section>
+          <NavBottom likeProduct={likeProduct} />
+          <section></section>
+
+          <section>
+            <NavCategories />
+          </section>
+        </section>
+
+        <section className="section_desktop_all">
+          {setJackets.map((el) => (
+            <>
+              <NavLink
+                to={`/Description/${el.name}`}
+                onClick={() => handleDescription(el)}
+                className="navlink_all"
+                key={el.id}
+              >
+                <section className="section_all_product">
+                  <img alt={el.name} src={el.image} />
+                  <p>{el.name}</p>
+                  <span className="price">${el.price}</span>
+
+                  <FcLike
+                    className="no_like"
+                    onClick={(e) => onLike(el.id, el, e)}
+                  />
+                </section>
+              </NavLink>
+            </>
+          ))}
+        </section>
+      </main>
     </>
   );
 };
