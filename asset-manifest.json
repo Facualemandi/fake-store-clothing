@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fake-store-clothing/static/css/main.5fa159f9.css",
-    "main.js": "/fake-store-clothing/static/js/main.028f3e79.js",
+    "main.css": "/fake-store-clothing/static/css/main.632fd7f7.css",
+    "main.js": "/fake-store-clothing/static/js/main.83b206d7.js",
     "static/media/ShoesHeader.png": "/fake-store-clothing/static/media/ShoesHeader.25cd894f9d3960d0c2a3.png",
     "static/media/WomenHeader.png": "/fake-store-clothing/static/media/WomenHeader.4111e7575f4143c2a162.png",
     "static/media/AllProducts.png": "/fake-store-clothing/static/media/AllProducts.1cbc0b7078594950ebdc.png",
@@ -10,11 +10,11 @@
     "static/media/RopaMen.png": "/fake-store-clothing/static/media/RopaMen.a6d352fc415dae5f4b03.png",
     "static/media/ShoesNav.png": "/fake-store-clothing/static/media/ShoesNav.7fcedf2f3392d60b24fc.png",
     "index.html": "/fake-store-clothing/index.html",
-    "main.5fa159f9.css.map": "/fake-store-clothing/static/css/main.5fa159f9.css.map",
-    "main.028f3e79.js.map": "/fake-store-clothing/static/js/main.028f3e79.js.map"
+    "main.632fd7f7.css.map": "/fake-store-clothing/static/css/main.632fd7f7.css.map",
+    "main.83b206d7.js.map": "/fake-store-clothing/static/js/main.83b206d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fa159f9.css",
-    "static/js/main.028f3e79.js"
+    "static/css/main.632fd7f7.css",
+    "static/js/main.83b206d7.js"
   ]
 }
