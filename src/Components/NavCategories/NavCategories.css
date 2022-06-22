@@ -58,13 +58,26 @@
     width: 150px;
     height: auto;
     border-radius: 30px;
-    background-color: rgba(166, 166, 166, 0.23);
+    background-color: rgba(150, 150, 150, 0.308);
     margin: 5px;
+  }
+
+  .container_nav_desktop section:hover {
+    background-color: #b0c6ff;
+    transition: 0.5s;
   }
 
   .container_nav_desktop section section {
     width: 55px;
     height: 55px;
     margin-right: 25px;
+  }
+
+  .container_nav_desktop section p {
+    font-weight: bold;
+  }
+
+  .container_nav_desktop .container_shoe:hover {
+    background-color: #678fef;
   }
 }
