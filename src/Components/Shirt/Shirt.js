@@ -11,7 +11,7 @@ import ModalLike from "../ModalLike/ModalLike";
 import { useProducts } from "../../Hooks/useProducts";
 import NoFound from "../NoFound/NoFound";
 
-const Shirt = ({ handleDescription, onLike, likeProduct, likeModal , }) => {
+const Shirt = ({ handleDescription, onLike, likeProduct, likeModal}) => {
   const { changeValue, onChangeValue, setShirt } = useSearch();
   const {loading} = useProducts()
   

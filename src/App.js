@@ -79,7 +79,6 @@ function App() {
     }
   };
 
-
   return (
     <>
       <Routes>
@@ -89,10 +88,8 @@ function App() {
             <AllProducts
               changeValue={changeValue}
               onChangeValue={onChangeValue}
-              products={products}
               handleDescription={handleDescription}
               setProduct={setProduct}
-              count={count}
               onLike={onLike}
               likeProduct={likeProduct}
               likeModal={likeModal}
@@ -103,8 +100,6 @@ function App() {
           path="/Zapatillas"
           element={
             <Shoes
-              shoes={shoes}
-              setProduct={setProduct}
               handleDescription={handleDescription}
               onLike={onLike}
               likeProduct={likeProduct}
@@ -116,9 +111,7 @@ function App() {
           path="/Remeras"
           element={
             <Shirt
-              shirts={shirts}
               handleDescription={handleDescription}
-              setProduct={setProduct}
               onLike={onLike}
               likeProduct={likeProduct}
               likeModal={likeModal}
@@ -129,8 +122,6 @@ function App() {
           path="/Camperas"
           element={
             <Jackets
-              jackets={jackets}
-              setProduct={setProduct}
               handleDescription={handleDescription}
               onLike={onLike}
               likeProduct={likeProduct}
@@ -150,7 +141,6 @@ function App() {
               modal={modal}
               updateNewAmount={updateNewAmount}
               cart={cart}
-              onLike={onLike}
             />
           }
         />
