@@ -4,11 +4,8 @@ import "./NavCategories.css";
 import Shoes from "../Images/ShoesNav.png";
 import shirt from "../Images/RopaMen.png";
 import jacket from "../Images/CamperaNav.png";
-import { useActiveCatgory } from "../../Hooks/useActiveCatgory";
 
 const NavCategories = () => {
-  const { handleAll } = useActiveCatgory();
-
   return (
     <>
       <nav className="container_nav">
@@ -41,17 +38,14 @@ const NavCategories = () => {
         </NavLink>
       </nav>
 
-
-
-
       <nav className="container_nav_desktop">
-        <NavLink to={"/"} className="nav_link" onClick={handleAll}>
+        <NavLink to={"/"} className={`nav_link`}>
           <section className="all_categ_desk">
             <p>Todo los productos</p>
           </section>
         </NavLink>
 
-        <NavLink to={"/Remeras"} className="nav_link">
+        <NavLink to={"/Remeras"} className={`nav_link`}>
           <section>
             <section className="container_shoe">
               <img alt="Remera" src={shirt} className="shoe" />
