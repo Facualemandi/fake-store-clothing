@@ -179,3 +179,90 @@
   color: white;
   font-family: "Montserrat", sans-serif;
 }
+
+.dsad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .main_description {
+    display: flex;
+    width: 1000px;
+  }
+
+  .section_img_desc {
+    width: 500px;
+    height: 500px;
+  }
+  .main_description section img {
+    width: 500px;
+    height: 500px;
+    padding-top: 50px;
+  }
+
+  .section_desktop {
+    padding-top: 50px;
+  }
+  .description_product {
+    width: 500px;
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .section_btn {
+    width: 1000px;
+  }
+
+  .container_count_description {
+    width: 1000px;
+    margin: 0;
+  }
+
+  .section_add_cart {
+    margin: 0px;
+    width: 1000px;
+  }
+
+  .section_add {
+    cursor: pointer;
+  }
+
+  .description_name_price {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0%;
+  }
+  .description_name_price p,
+  span {
+    width: 300px;
+  }
+
+  .header_description {
+    width: 100vw;
+    display: flex;
+    margin: auto;
+    background-color: white;
+  }
+
+  .description_item {
+    width: 300px;
+    margin: 0%;
+  }
+
+  .btn_add {
+    cursor: pointer;
+  }
+
+  .dsad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: auto;
+    background-color: rgba(221, 221, 221, 0.626);
+  }
+}
