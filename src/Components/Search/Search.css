@@ -25,9 +25,10 @@
 
 @media (min-width: 1000px) {
   .section_search {
-    width: 850px;
+    width: 1000px;
     height: 60px;
     display: flex;
     margin: auto;
+    margin-top: 15px;
   }
 }

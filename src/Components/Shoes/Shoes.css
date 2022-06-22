@@ -43,3 +43,12 @@
 .navlink_shoes{
   text-decoration: none;
 }
+
+@media (min-width: 1000px){
+  .shoe_header{
+    width: 1000px;
+    height: 270px;
+    display: flex;
+    margin: auto;
+  }
+}

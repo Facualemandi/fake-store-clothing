@@ -145,7 +145,7 @@
   .main_desktop {
   }
   .img_all {
-    width: 850px;
+    width: 1000px;
     height: 270px;
     display: flex;
     margin: auto;
@@ -157,6 +157,7 @@
   .main_desktop {
     display: flex;
     margin: auto;
-    width: 850px;
+    width: 1000px;
+    margin-top: 15px;
   }
 }
