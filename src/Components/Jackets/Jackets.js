@@ -7,9 +7,13 @@ import { useSearch } from "../../Hooks/useSearch";
 import { NavLink } from "react-router-dom";
 import NavBottom from "../NavBottom/NavBottom";
 import { FcLike } from "react-icons/fc";
+import ModalLike from "../ModalLike/ModalLike";
+import { useProducts } from "../../Hooks/useProducts";
+import NoFound from "../NoFound/NoFound";
 
-const Jackets = ({ handleDescription, onLike, likeProduct }) => {
+const Jackets = ({ handleDescription, onLike, likeProduct, likeModal }) => {
   const { changeValue, onChangeValue, setJackets } = useSearch();
+  const { loading } = useProducts();
 
   return (
     <>
@@ -19,6 +23,7 @@ const Jackets = ({ handleDescription, onLike, likeProduct }) => {
 
       <Search changeValue={changeValue} onChangeValue={onChangeValue} />
       <NavCategories />
+      {likeModal && <ModalLike />}
 
       <main className="main_shockets">
         {setJackets.map((element) => (
@@ -39,8 +44,8 @@ const Jackets = ({ handleDescription, onLike, likeProduct }) => {
           </NavLink>
         ))}
       </main>
-
-      <NavBottom  likeProduct={likeProduct}/>
+      {setJackets.length === 0 && !loading && <NoFound />}
+      <NavBottom likeProduct={likeProduct} />
     </>
   );
 };

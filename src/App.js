@@ -79,6 +79,7 @@ function App() {
     }
   };
 
+
   return (
     <>
       <Routes>
@@ -107,6 +108,7 @@ function App() {
               handleDescription={handleDescription}
               onLike={onLike}
               likeProduct={likeProduct}
+              likeModal={likeModal}
             />
           }
         />
@@ -119,6 +121,7 @@ function App() {
               setProduct={setProduct}
               onLike={onLike}
               likeProduct={likeProduct}
+              likeModal={likeModal}
             />
           }
         />
@@ -131,6 +134,7 @@ function App() {
               handleDescription={handleDescription}
               onLike={onLike}
               likeProduct={likeProduct}
+              likeModal={likeModal}
             />
           }
         />

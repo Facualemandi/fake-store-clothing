@@ -39,3 +39,32 @@
   justify-content: center;
   align-items: center;
 }
+
+.container_nav_desktop {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .container_nav {
+    display: none;
+  }
+  .container_nav_desktop {
+    display: block;
+  }
+
+  .container_nav_desktop section {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: auto;
+    border-radius: 30px;
+    background-color: rgba(166, 166, 166, 0.23);
+    margin: 5px;
+  }
+
+  .container_nav_desktop section section {
+    width: 55px;
+    height: 55px;
+    margin-right: 25px;
+  }
+}

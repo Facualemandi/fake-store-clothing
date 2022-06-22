@@ -7,9 +7,13 @@ import NavCategories from "../NavCategories/NavCategories";
 import { Search } from "../Search/Search";
 import "./Shoes.css";
 import { FcLike } from "react-icons/fc";
+import ModalLike from "../ModalLike/ModalLike";
+import { useProducts } from "../../Hooks/useProducts";
+import NoFound from "../NoFound/NoFound";
 
-const Shoes = ({ handleDescription, onLike, likeProduct }) => {
+const Shoes = ({ handleDescription, onLike, likeProduct, likeModal,  }) => {
   const { changeValue, onChangeValue, setShoes } = useSearch();
+  const {loading} = useProducts()
 
   return (
     <>
@@ -19,6 +23,7 @@ const Shoes = ({ handleDescription, onLike, likeProduct }) => {
 
       <Search changeValue={changeValue} onChangeValue={onChangeValue} />
       <NavCategories />
+      {likeModal && <ModalLike/>}
       <main className="main_shoes">
         {setShoes.map((element) => (
           <NavLink
@@ -39,6 +44,8 @@ const Shoes = ({ handleDescription, onLike, likeProduct }) => {
           </NavLink>
         ))}
       </main>
+      {setShoes.length === 0 && !loading && <NoFound />}
+      
 
       <NavBottom  likeProduct={likeProduct}/>
     </>

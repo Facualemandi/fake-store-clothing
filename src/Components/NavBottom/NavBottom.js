@@ -24,6 +24,27 @@ const NavBottom = ({ likeProduct }) => {
           <FcOnlineSupport className="icon_user" />
         </NavLink>
       </nav>
+
+      <nav className="nav_desktop">
+        <NavLink to="/Likes" className="navlink_nav_bottom">
+          <section className="section_icon_like_desk">
+            <FcLike className="icon_like" />
+          </section>
+          <p className="amount_product_like">{likeProduct.length}</p>
+        </NavLink>
+
+        <NavLink to={"/Cart"}>
+          <section className="section_cart_all_product">
+            <FcPaid className="icon_cart_desk" />
+          </section>
+        </NavLink>
+
+        <NavLink to={"/Support"}>
+          <section className="section_nav_desk">
+            <FcOnlineSupport className="icon_user" />
+          </section>
+        </NavLink>
+      </nav>
     </>
   );
 };
