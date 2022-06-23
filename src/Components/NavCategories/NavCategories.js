@@ -4,6 +4,7 @@ import "./NavCategories.css";
 import Shoes from "../Images/ShoesNav.png";
 import shirt from "../Images/RopaMen.png";
 import jacket from "../Images/CamperaNav.png";
+import all from '../Images/all.png'
 
 const NavCategories = () => {
   return (
@@ -11,7 +12,7 @@ const NavCategories = () => {
       <nav className="container_nav">
         <NavLink to={"/"} className="nav_link">
           <section className="container_shoe">
-            <img alt="Zapatilla" src={Shoes} className="shoe" />
+            <img alt="Zapatilla" src={all} className="shoe" />
           </section>
           <p>Todo</p>
         </NavLink>
