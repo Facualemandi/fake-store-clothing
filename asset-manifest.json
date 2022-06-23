@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/fake-store-clothing/static/css/main.6fe4eb55.css",
-    "main.js": "/fake-store-clothing/static/js/main.143d5fe6.js",
+    "main.css": "/fake-store-clothing/static/css/main.aca0ea66.css",
+    "main.js": "/fake-store-clothing/static/js/main.0d9a253a.js",
     "static/media/ShoesHeader.png": "/fake-store-clothing/static/media/ShoesHeader.25cd894f9d3960d0c2a3.png",
     "static/media/WomenHeader.png": "/fake-store-clothing/static/media/WomenHeader.4111e7575f4143c2a162.png",
     "static/media/AllProducts.png": "/fake-store-clothing/static/media/AllProducts.1cbc0b7078594950ebdc.png",
     "static/media/CamperaNav.png": "/fake-store-clothing/static/media/CamperaNav.09ab76c6482cd3eccc1d.png",
     "static/media/MenHeader.png": "/fake-store-clothing/static/media/MenHeader.a778af542f635ac44a0b.png",
+    "static/media/all.png": "/fake-store-clothing/static/media/all.b1898c1356638bfc13f8.png",
     "static/media/RopaMen.png": "/fake-store-clothing/static/media/RopaMen.a6d352fc415dae5f4b03.png",
     "static/media/ShoesNav.png": "/fake-store-clothing/static/media/ShoesNav.7fcedf2f3392d60b24fc.png",
     "index.html": "/fake-store-clothing/index.html",
-    "main.6fe4eb55.css.map": "/fake-store-clothing/static/css/main.6fe4eb55.css.map",
-    "main.143d5fe6.js.map": "/fake-store-clothing/static/js/main.143d5fe6.js.map"
+    "main.aca0ea66.css.map": "/fake-store-clothing/static/css/main.aca0ea66.css.map",
+    "main.0d9a253a.js.map": "/fake-store-clothing/static/js/main.0d9a253a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fe4eb55.css",
-    "static/js/main.143d5fe6.js"
+    "static/css/main.aca0ea66.css",
+    "static/js/main.0d9a253a.js"
   ]
 }
