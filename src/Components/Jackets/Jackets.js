@@ -30,7 +30,7 @@ const Jackets = ({ handleDescription, onLike, likeProduct, likeModal }) => {
           {setJackets.map((element) => (
             <NavLink
               to={`/Description/${element.name}`}
-              className="navlink_shakets"
+              className="navlink_all"
               onClick={() => handleDescription(element)}
             >
               <section className="section_all_product">
